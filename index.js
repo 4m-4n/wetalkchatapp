@@ -1,7 +1,6 @@
 import http from "http";
 import  express from "express";
 import {Server} from "socket.io";
-import { Socket } from "socket.io-client";
 const app=express();
 const users=[{}];
 const port=process.env.PORT;
