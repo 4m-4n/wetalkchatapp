@@ -4,6 +4,7 @@ import {Server} from "socket.io";
 import { Socket } from "socket.io-client";
 const app=express();
 const users=[{}];
+const port=process.env.PORT;
 app.get("/",(req,res)=>{
     res.send("workingg");
 })
@@ -30,6 +31,6 @@ io.on("connection",(socket)=>{
     })
     
 })
-server.listen(5500,()=>{
+server.listen(port,()=>{
 console.log("server is running on port 5500");
 })
